@@ -449,6 +449,9 @@ int main()
         JogoUno uno;
         uno.Jogo(n_jogadores);
     }
+    else if (escolha == "konami"){
+    cout << '\n' <<"༼つಠ益ಠ༽つ ─=≡ΣO)) HADOUKEN" << '\n';
+    goto ESCOLHA;}
     else
     {
         cout << '\n'<<"Entrada invalida, favor re-insira (Opcoes: jogar, tutorial)"<<'\n';
