@@ -300,7 +300,13 @@ void JogoUno::Jogo(int numero_jogadores)
         }
 
         
-        
+        if (maos_dos_jogadores[jogador_atual-1].size() == 0)
+        {
+            cout << '\n' <<"O jogador " << jogador_atual << " venceu!!!" << '\n'
+            << "playing fogos_de_artificio.mp4";
+            std::cin.ignore();
+            abort();
+        }
 
 
 
@@ -356,13 +362,7 @@ void JogoUno::Jogo(int numero_jogadores)
         }
 
     }
-        if (maos_dos_jogadores[jogador_atual-1].size() == 0)
-        {
-            cout << '\n' <<"O jogador " << jogador_atual << " venceu!!!" << '\n'
-            << "playing fogos_de_artificio.mp4";
-            std::cin.ignore();
-            abort();
-        }
+        
         
 }
 
@@ -449,9 +449,10 @@ int main()
         JogoUno uno;
         uno.Jogo(n_jogadores);
     }
-    else if (escolha == "konami"){
-    cout << '\n' <<"༼つಠ益ಠ༽つ ─=≡ΣO)) HADOUKEN" << '\n';
-    goto ESCOLHA;}
+    else if(escolha == "konami"){
+        cout << '\n' << "༼つಠ益ಠ༽つ ─=≡ΣO)) HADOUKEN" << '\n';
+        goto ESCOLHA;
+    }
     else
     {
         cout << '\n'<<"Entrada invalida, favor re-insira (Opcoes: jogar, tutorial)"<<'\n';
